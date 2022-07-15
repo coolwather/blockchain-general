@@ -1,11 +1,17 @@
 {
-  "name": "Lottery",
+  "name": "lottery",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Guilherme Soares",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "hardhat": "^2.10.1"
+  },
+  "scripts": {
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile",
+    "deploy:localhost": "npx hardhat run scripts/deploy.ts"
   },
   "devDependencies": {
     "@ethersproject/abi": "^5.4.7",
@@ -15,6 +21,8 @@
     "@nomicfoundation/hardhat-toolbox": "^1.0.1",
     "@nomiclabs/hardhat-ethers": "^2.0.0",
     "@nomiclabs/hardhat-etherscan": "^3.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.7.0",
     "@typechain/ethers-v5": "^10.1.0",
     "@typechain/hardhat": "^6.1.2",
     "@types/chai": "^4.2.0",
